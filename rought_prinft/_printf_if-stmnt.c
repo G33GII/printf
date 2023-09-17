@@ -17,10 +17,9 @@ void _printf(const char *format, ...) {
             if (format[i] == 'c') {
                 _putchar(va_arg(args, int));
             } else if (format[i] == 's') {
-                for (char *str = va_arg(args, char*); *str; str++) {
-                    _putchar(*str);
+                _pritn_str_(format[i])
                 }
-            } else if (format[i] == 'd') {
+           /* } else if (format[i] == 'd') {
                 int d = va_arg(args, int);
                 if (d < 0) _putchar('-'), d = -d;
                 if (d == 0) _putchar('0');
@@ -39,7 +38,7 @@ void _printf(const char *format, ...) {
                     f *= 10;
                     _putchar((int)f + '0');
                 }
-            }
+            }*/
         } else {
             _putchar(format[i]);
         }

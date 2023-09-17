@@ -1,5 +1,6 @@
 #include "main.h"
 #include <unistd.h>
+
 /**
  * _putchar_ - prototype to print characters
  * @p: character
