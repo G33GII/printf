@@ -1,12 +1,12 @@
 #include "main.h"
 #include <unistd.h>
 /**
- * main - Entry point
- * description - print _putchar_
+ * _putchar_ - prototype to print characters
+ * @p: character
  *
  * Return: 0
  */
 int _putchar_(char p)
 {
-	return (write (1, &p, 1));
+	return (write(1, &p, 1));
 }
