@@ -1,5 +1,5 @@
-#ifndef main_h
-#define main_h
+#ifndef MAIN_H
+#define MAIN_H
 /**
  * main - entry point
  * description - headers
@@ -7,4 +7,7 @@
 */
 int _printf(const char *format, ...);
 int _putchar(char a);
+
+
+
 #endif
