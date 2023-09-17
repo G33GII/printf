@@ -6,7 +6,7 @@
  * Return: 0
 */
 int _printf(const char *format, ...);
-int _putchar(char a);
+int _putchar_(char p);
 
 
 

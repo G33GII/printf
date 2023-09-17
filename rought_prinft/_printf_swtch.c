@@ -108,6 +108,7 @@ int main(void)
 	_length_ += _printf("String:[%s]\n", "string !");
 	_length_ += _printf("C:[%c]\n", 'H');
 
-	return (_length_);
+	return (0);
 }
 /* ============================= main ============================= */
+
