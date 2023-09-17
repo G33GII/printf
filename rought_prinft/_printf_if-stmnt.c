@@ -2,22 +2,36 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-int _putchar(char a) {
+int _putchar_(char a) {
     write(1, &a, 1);
     return 1;
 }
+int _print_str_(const char *_s)
+{
+	int _length_ = 0;
 
+	while (*_s)
+	{
+		_length_
+			+= _putchar_(*_s);
+		_s++;
+	}
+	return (_length_);
+}
 void _printf(const char *format, ...) {
+    int i = 0;
+    
     va_list args;
     va_start(args, format);
+    
 
-    for (int i = 0; format[i]; i++) {
+    for (; format[i]; i++) {
         if (format[i] == '%') {
             i++;
             if (format[i] == 'c') {
-                _putchar(va_arg(args, int));
+                _putchar_(va_arg(args, int));
             } else if (format[i] == 's') {
-                _pritn_str_(format[i])
+                _print_str_(va_arg(args, char *));
                 }
            /* } else if (format[i] == 'd') {
                 int d = va_arg(args, int);
@@ -40,7 +54,7 @@ void _printf(const char *format, ...) {
                 }
             }*/
         } else {
-            _putchar(format[i]);
+            _putchar_(format[i]);
         }
     }
 
