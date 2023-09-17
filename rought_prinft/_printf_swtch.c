@@ -4,33 +4,43 @@
 #include <unistd.h>
 
 /**
- * _putchar - Print a single character to the standard output.
+ * write output to stdout, the standard output stream.
+ * You need to handle the following conversion specifiers: c, s, %.
+ * Returns: the number of characters printed (excluding the null byte used to end output to strings).
+ * 
+*/
+
+/* ============================= _putchar_ ============================= */
+/**
+ * _putchar_ - Print a single character to the standard output.
  * @a: The character to print.
  * Return: 1 on success, -1 on failure.
  */
-int _putchar(char a)
+int _putchar_(char a)
 {
     /* Write a single character to the standard output */
     write(1, &a, 1);
     return (1);
 }
 
+/* ============================= _print_str_ ============================= */
 /**
- * print_str - Print a string to the standard output.
+ * _print_str_ - Print a string to the standard output.
  * @s: The string to print.
  * Return: The number of characters printed.
  */
-int print_str(const char *s)
+int _print_str_(const char *s)
 {
     int len = 0;
     while (*s)
     {
-        len += _putchar(*s);
+        len += _putchar_(*s);
         s++;
     }
     return (len);
 }
 
+/* ============================= _printf ============================= */
 /**
  * _printf - Custom printf function supporting %c and %s format specifiers.
  * @format: The format string.
@@ -55,13 +65,13 @@ int _printf(const char *const format, ...)
                 {
                     case 'c':
                         /* Handle character format specifier */
-                        len += _putchar(va_arg(quarrel, int));
+                        len += _putchar_(va_arg(quarrel, int));
                         break;
                     case 's':
                     {
                         /* Handle string format specifier */
                         char *str = va_arg(quarrel, char *);
-                        len += print_str(str);
+                        len += _print_str_(str);
                         break;
                     }
                     default:
@@ -71,7 +81,7 @@ int _printf(const char *const format, ...)
             else
             {
                 /* Print a character that is not part of a format specifier */
-                _putchar(*fmt_ptr);
+                _putchar_(*fmt_ptr);
                 len++;
             }
             fmt_ptr++;
@@ -81,6 +91,7 @@ int _printf(const char *const format, ...)
     return (len);    /* Return the total number of characters printed */
 }
 
+/* ============================= main ============================= */
 /**
  * main - Entry point of the program.
  * Return: 0 on success.
@@ -96,3 +107,4 @@ int main(void)
 
     return (len);
 }
+/* ============================= main ============================= */
