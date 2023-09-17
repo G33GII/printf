@@ -8,7 +8,7 @@
  * You need to handle the following conversion specifiers: c, s, %.
  * Returns: the number of characters printed (excluding the null byte used to end output to strings).
  * 
-*/
+ */
 
 /* ============================= _putchar_ ============================= */
 /**
@@ -16,11 +16,11 @@
  * @a: The character to print.
  * Return: 1 on success, -1 on failure.
  */
-int _putchar_(char a)
+int _putchar_(char p)
 {
-    /* Write a single character to the standard output */
-    write(1, &a, 1);
-    return (1);
+	/* Write a single character to the standard output */
+	write(1, &p, 1);
+	return (1);
 }
 
 /* ============================= _print_str_ ============================= */
@@ -29,15 +29,17 @@ int _putchar_(char a)
  * @s: The string to print.
  * Return: The number of characters printed.
  */
-int _print_str_(const char *s)
+int _print_str_(const char *_s)
 {
-    int len = 0;
-    while (*s)
-    {
-        len += _putchar_(*s);
-        s++;
-    }
-    return (len);
+	int _length_
+		= 0;
+	while (*_s)
+	{
+		_length_
+			+= _putchar_(*_s);
+		_s++;
+	}
+	return (_length_);
 }
 
 /* ============================= _printf ============================= */
@@ -48,48 +50,49 @@ int _print_str_(const char *s)
  */
 int _printf(const char *const format, ...)
 {
-    int len = 0;
-    va_list quarrel; /* Initialize a variable argument list */
-    const char *fmt_ptr = format;
+	int _length_ = 0;
+	va_list _list_; /* Initialize a variable argument list */
+	const char *fmt_ptr = format;
 
-    va_start(quarrel, format); /* Start processing the variable arguments */
-    if (format)
-    {
-        while (*fmt_ptr)
-        {
-            if (*fmt_ptr == '%')
-            {
-                fmt_ptr++;
+	va_start(_list_, format); /* Start processing the variable arguments */
+	if (format)
+	{
+		while (*fmt_ptr)
+		{
+			if (*fmt_ptr == '%')
+			{
+				fmt_ptr++;
 
-                switch (*fmt_ptr)
-                {
-                    case 'c':
-                        /* Handle character format specifier */
-                        len += _putchar_(va_arg(quarrel, int));
-                        break;
-                    case 's':
-                    {
-                        /* Handle string format specifier */
-                        char *str = va_arg(quarrel, char *);
-                        len += _print_str_(str);
-                        break;
-                    }
-                    default:
-                        break;
-                }
-            }
-            else
-            {
-                /* Print a character that is not part of a format specifier */
-                _putchar_(*fmt_ptr);
-                len++;
-            }
-            fmt_ptr++;
-        }
-    }
-    va_end(quarrel); /* End processing of variable arguments */
-    return (len);    /* Return the total number of characters printed */
+				switch (*fmt_ptr)
+				{
+					case 'c':
+						/* Handle character format specifier */
+						_length_ += _putchar_(va_arg(_list_, int));
+						break;
+					case 's':
+						{
+							/* Handle string format specifier */
+							char *_str_ = va_arg(_list_, char *);
+							_length_ += _print_str_(_str_);
+							break;
+						}
+					default:
+						break;
+				}
+			}
+			else
+			{
+				/* Print a character that is not part of a format specifier */
+				_putchar_(*fmt_ptr);
+				_length_++;
+			}
+			fmt_ptr++;
+		}
+	}
+	va_end(_list_); /* End processing of variable arguments */
+	return (_length_); /* Return the total number of characters printed */
 }
+
 
 /* ============================= main ============================= */
 /**
@@ -98,13 +101,13 @@ int _printf(const char *const format, ...)
  */
 int main(void)
 {
-    int len = 0;
+	int _length_ = 0;
 
-    /* Testing the custom _printf function */
-    len += _printf("printf\n");
-    len += _printf("String:[%s]\n", "string !");
-    len += _printf("C:[%c]\n", 'H');
+	/* Testing the custom _printf function */
+	_length_ += _printf("printf\n");
+	_length_ += _printf("String:[%s]\n", "string !");
+	_length_ += _printf("C:[%c]\n", 'H');
 
-    return (len);
+	return (_length_);
 }
 /* ============================= main ============================= */
