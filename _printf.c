@@ -11,6 +11,7 @@ int _printf(const char *const format, ...)
 	const char *fmt_ptr = format;
 
 	va_start(_list_, format); /* Start processing the variable arguments */
+
 	if (format)
 	{
 		while (*fmt_ptr)
@@ -18,21 +19,14 @@ int _printf(const char *const format, ...)
 			if (*fmt_ptr == '%')
 			{
 				fmt_ptr++;
-				switch (*fmt_ptr)
+				if (*fmt_ptr == 'c')	/* Handle character format specifier */
+					_length_ += _putchar_(va_arg(_list_, int));
+				else if (*fmt_ptr == 's') /* Handle string format specifier */
 				{
-					case 'c': /* Handle character format specifier */
-						_length_ += _putchar_(va_arg(_list_, int));
-						break;
-					case 's': /* Handle string format specifier */
-						{
-							char *_str_ = va_arg(_list_, char *);
-
-							_length_ += _print_str_(_str_);
-							break;
-						}
-					default:
-						break;
+					char *_str_ = va_arg(_list_, char *);
+					_length_ += _print_str_(_str_);
 				}
+
 			}
 			else
 			{ /* Print a character not part of a format specifier */
@@ -41,7 +35,10 @@ int _printf(const char *const format, ...)
 			}
 			fmt_ptr++;
 		}
+		
+			
 	}
+	
 	va_end(_list_); /* End processing of variable arguments */
 	return (_length_); /* Return the total number of characters printed */
 }
