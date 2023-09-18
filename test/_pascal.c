@@ -49,7 +49,7 @@
 
  int c_handler(va_list arg)
  {
-   int count;
+   int count = 0;
    char get_char = va_arg(arg, int);
   count = _putchar(get_char);
   return count; 
@@ -63,7 +63,7 @@
 
   int d_handler(va_list arg)
  {
-   int count;
+   int count = 0;
    
    int val = va_arg(arg, int);
    
