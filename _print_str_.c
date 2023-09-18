@@ -7,7 +7,11 @@
  */
 int _print_str_(const char *_s)
 {
+	if (_s == '\0')
+	return (1);
+	
 	for (; *_s; _s++)
 		_putchar_(*_s);
+	
 	return (0);
 }
