@@ -21,6 +21,8 @@ int _printf(const char *format, ...);
 int _putchar(char _p);
 int s_func(va_list _list);
 int c_func(va_list _list);
+int (*_slt_func(char s))(va_list _list);
+
 
 
 
