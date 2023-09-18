@@ -39,7 +39,7 @@ int _printf(const char *const format, ...)
 			else
 			{
 				_bff_[_buff_ct++] = '%';
-				/*_bff_[_buff_ct++] = (*fmt_ptr);*/
+				_bff_[_buff_ct++] = (*fmt_ptr);
 				continue;
 			}
 		}
