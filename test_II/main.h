@@ -6,22 +6,16 @@
 #include <limits.h>
 #include <unistd.h>
 
+#define _bff_sz 1024
+
 /**
  * main - entry point
  * description - headers
  * Return: 0
- */
-typedef struct _lst_arr
-{
-	char _chars;
-	int (*_func)(va_list _list);
-}_lst_arr;
-
+*/
 int _printf(const char *format, ...);
-int _putchar(char _p);
-int s_func(va_list _list);
-int c_func(va_list _list);
-
+int _putchar_(char _p);
+int _print_str_(const char *_s);
 
 
 #endif

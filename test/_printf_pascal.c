@@ -38,7 +38,7 @@ int c_func(va_list _list)
 
 
 /*======================================================*/
-int (*_slt_func(char s))(va_list arg)
+int (*_slt_func(char s))(va_list _list)
 {
     int i;
     _lst_arr fmt_sp[] = {
