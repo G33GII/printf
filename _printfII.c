@@ -13,8 +13,8 @@ int _printf(const char *const format, ...)
 	va_list _list_;                 /* Initialize a variable argument list */
 	const char *fmt_ptr = format;   /* Pointer to the format string */
 
-	if (!format)
-		return (1);
+	if (format == NULL)
+		return (-11);
 
 	va_start(_list_, format);       /* Start processing the variable arguments */
 
