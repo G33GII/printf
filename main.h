@@ -6,7 +6,7 @@
 #include <limits.h>
 #include <unistd.h>
 
-#define _bff_sz 24
+#define _bff_sz 1024
 
 /**
  * main - entry point
