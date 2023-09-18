@@ -1,8 +1,8 @@
 #include <stdio.h>
- #include <unistd.h>
- #include <stdlib.h>
- #include <string.h>
- #include <stdarg.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdarg.h>
  
 
 
@@ -96,7 +96,7 @@ int s_handler(va_list arg)
         char *ptr = va_arg(arg, char *);
         if (ptr == NULL)
         {
-                ptr = "(null)";
+                ptr = "(null)";   
         }
         while (*ptr)
         {
