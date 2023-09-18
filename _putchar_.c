@@ -7,7 +7,7 @@
  *
  * Return: 0
  */
-int _putchar_(char p)
+int _putchar_(char _p)
 {
-	return (write(1, &p, 1));
+	return (write(1, &_p, 1));
 }

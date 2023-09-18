@@ -7,13 +7,7 @@
  */
 int _print_str_(const char *_s)
 {
-	int _length_ = 0;
-
-	while (*_s)
-	{
-		_length_
-			+= _putchar_(*_s);
-		_s++;
-	}
-	return (_length_);
+	for (; *_s; _s++)
+		_putchar_(*_s);
+	return (0);
 }
