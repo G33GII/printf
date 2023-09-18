@@ -28,6 +28,7 @@ int _printf(const char *const format, ...)
 				else if (*fmt_ptr == 's') /* String format specifier */
 				{
 					char *str = va_arg(_list_, char *);
+
 					for (; *str; str++)
 						_bff_[grry_count++] = *str;
 				}
