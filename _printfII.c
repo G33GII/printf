@@ -14,7 +14,7 @@ int _printf(const char *const format, ...)
 	const char *fmt_ptr = format;   /* Pointer to the format string */
 
 	if (format == NULL)
-		return (-11);
+		return (-1);
 
 	va_start(_list_, format);       /* Start processing the variable arguments */
 
