@@ -24,7 +24,7 @@ int _printf(const char *const format, ...)
 				_length += _slt_func(*_fmt)(_list);
 			else
 			{
-				_length += (_putchar('%'), _putchar(*_fmt));
+				_length += _putchar(*_fmt);
 				continue;
 			}
 		}
