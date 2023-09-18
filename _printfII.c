@@ -41,7 +41,6 @@ int _printf(const char *const format, ...)
 				_bff_[_buff_ct++] = '%';
 				_bff_[_buff_ct++] = (*fmt_ptr);
 			}
-				
 		}
 		else
 			_bff_[_buff_ct++] = (*fmt_ptr); /* Normal character */
