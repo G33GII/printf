@@ -32,10 +32,7 @@ int s_func(va_list _list)
 /*======================================================*/
 int c_func(va_list _list)
 {
-  
     char _c = va_arg(_list, int);
-    if (_c == NULL)
-      return (0);
     return (_putchar(_c)); 
 }
 
@@ -47,8 +44,7 @@ int (*_slt_func(char s))(va_list arg)
     _lst_arr fmt_sp[] = {
         {'c', &c_func},
         {'s', &s_func},
-       
-        {NULL, NULL}
+        {'\0', NULL}
                         };
     for (i = 0; fmt_sp[i]._chars; i++)
      if (s == fmt_sp[i]._chars)
@@ -93,9 +89,9 @@ int _printf(const char *const format, ...)
 /*======================================================*/
 int main(void)
 {
-    _printf("printf\n");
-    _printf("String:[%s]\n", "string!");
-    _printf("C:[%c]\n", 'H');
+    _printf("pr%%int%%f\n");
+    //_printf("String:[%s]\n", "string!");
+    //_printf("C:[%c]\n", 'H');
 
     return (0);
 }
