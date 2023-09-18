@@ -7,16 +7,22 @@
 #include <unistd.h>
 
 /**
- * main - entry point
- * description - headers
+ * struct _lst - new data type
+ * @_chars: member of new data type
+ * @_func: member of new data type
  * Return: 0
- */
-typedef struct _lst_arr
+*/
+struct _lst
 {
 	char _chars;
 	int (*_func)(va_list _list);
-}_lst_arr;
+};
 
+/**
+ * _lst_arr - Renamed data type
+ * Return: 0
+*/
+typedef struct _lst _lst_arr;
 int _printf(const char *format, ...);
 int _putchar(char _p);
 int s_func(va_list _list);
