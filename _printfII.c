@@ -12,7 +12,7 @@ int _printf(const char *const format, ...)
 	const char *fmt_ptr = format;   /* Pointer to the format string */
 
 	if (!format)
-		return (-1);
+		return (1);
 
 	va_start(_list_, format);       /* Start processing the variable arguments */
 
@@ -42,5 +42,5 @@ int _printf(const char *const format, ...)
 	_bff_[_buff_count] = '\0'; /* Null-terminate the buffer */
 	_print_str_(_bff_); /* Print the formatted string */
 	va_end(_list_); /* End processing of variable arguments */
-	return (_buff_count - 1); /* Return the total character count */
+	return (_buff_count); /* Return the total character count */
 }
