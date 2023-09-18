@@ -34,7 +34,7 @@ int _printf(const char *const format, ...)
 				char *str = va_arg(_list_, char *);
 
 				if (str == NULL)
-						str = "(null)";
+					str = "(null)";
 				for (; *str; str++)
 				{
 					_bff_[_buff_ct++] = *str;
