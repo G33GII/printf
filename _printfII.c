@@ -1,3 +1,4 @@
+
 #include "main.h"
 /**
  * _printf - Custom printf function supporting %c and %s format specifiers.
@@ -35,6 +36,9 @@ int _printf(const char *const format, ...)
 				for (; *str; str++)
 					_bff_[_buff_ct++] = *str;
 			}
+			else
+				_bff_[_buff_ct++] = '%';
+				_bff_[_buff_ct++] = (*fmt_ptr);
 		}
 		else
 			_bff_[_buff_ct++] = (*fmt_ptr); /* Normal character */
