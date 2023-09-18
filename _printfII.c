@@ -33,10 +33,10 @@ int _printf(const char *const format, ...)
 			{
 				char *str = va_arg(_list_, char *);
 
+				if (str == NULL)
+						str = "(null)";
 				for (; *str; str++)
 				{
-					if (*str == NULL)
-						*str = "(null)";
 					_bff_[_buff_ct++] = *str;
 				}
 			}
