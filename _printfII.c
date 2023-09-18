@@ -34,7 +34,11 @@ int _printf(const char *const format, ...)
 				char *str = va_arg(_list_, char *);
 
 				for (; *str; str++)
+				{
+					if (*str == NULL)
+						*str = "(null)";
 					_bff_[_buff_ct++] = *str;
+				}
 			}
 			else
 			{
