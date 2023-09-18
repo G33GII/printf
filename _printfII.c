@@ -37,7 +37,7 @@ int _printf(const char *const format, ...)
 		}
 		else
 			_bff_[_buff_ct++] = (*fmt_ptr); /* Normal character */
-		
+
 		if (_buff_ct >= _bff_sz - 1)
 		{
 			_bff_[_buff_ct] = '\0';
