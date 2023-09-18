@@ -3,7 +3,7 @@
 
 /**
  * _putchar_ - prototype to print characters
- * @p: character
+ * @_p: character
  *
  * Return: 0
  */
