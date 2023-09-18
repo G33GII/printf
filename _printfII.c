@@ -11,11 +11,12 @@ int _printf(const char *const format, ...)
 	va_list _list_;                 /* Initialize a variable argument list */
 	const char *fmt_ptr = format;   /* Pointer to the format string */
 
+	if (!format)
+		return(1);
+
 	va_start(_list_, format);       /* Start processing the variable arguments */
 
-	if (format)
-	{
-		while (*fmt_ptr)
+		for (; *fmt_ptr && format; fmt_ptr++)
 		{
 			if (*fmt_ptr == '%')
 			{
@@ -35,9 +36,9 @@ int _printf(const char *const format, ...)
 			}
 			else
 				_bff_[grry_count++] = (*fmt_ptr); /* Normal character */
-			fmt_ptr++; /* Move to the next character in the format string */
+			 /* Move to the next character in the format string */
 		}
-	}
+	
 	_bff_[grry_count] = '\0'; /* Null-terminate the buffer */
 	_print_str_(_bff_); /* Print the formatted string */
 	va_end(_list_); /* End processing of variable arguments */
