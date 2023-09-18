@@ -8,13 +8,11 @@
 int _printf(const char *const format, ...)
 {
 	int _length = 0;
-
 	va_list _list;
 	const char *_fmt = format;
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(_list, format);
 
 	for (; *_fmt && format; _fmt++)
