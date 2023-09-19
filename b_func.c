@@ -14,16 +14,15 @@
 int b_func(va_list _list)
 {
 	size_t x;
+   	int binary[32]; /* Assuming 32-bit integers */
+    int dx = 0, i;
 
 	x = va_arg(_list, int);
 	if (x == 0)
 	{
 		return (-1); /* Return -1 if input is zero */
 	}
-
-	int binary[32]; /* Assuming 32-bit integers */
-	int dx = 0;
-
+	
 	/* Convert the integer to binary */
 	while (x > 0)
 	{
@@ -32,7 +31,7 @@ int b_func(va_list _list)
 	}
 
 	/* Print the binary representation in reverse order */
-	for (int i = dx - 1; i >= 0; i--)
+	for (i = dx - 1; i >= 0; i--)
 	{
 		int z = binary[i] + 48; /* Convert 0/1 to '0'/'1' */
 

@@ -33,9 +33,9 @@ int print_num(long _n, int _c);
 int u_func(va_list _list);
 int custom_octal_format(unsigned int value);
 int o_func(va_list _list);
+
 int x_func(va_list _list);
 int hexadecimal_lowercase(unsigned int value, int uppercase);
-int hexadecimal_uppercase(unsigned int value, int uppercase)
-int X_func(va_list _list)
-
+int hexadecimal_uppercase(unsigned int value, int uppercase);
+int X_func(va_list _list);
 #endif
