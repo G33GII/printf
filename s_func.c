@@ -15,7 +15,7 @@ int s_func(va_list _list)
 	if (*_s == '\0')
 		return (0);
 	for (; *_s; _s++, _x++)
-		_x += _putchar(*_s);
+		_putchar(*_s);
 	return (_x);
 }
 
