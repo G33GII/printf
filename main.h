@@ -31,8 +31,8 @@ int d_func(va_list _list);
 int (*_slt_func(char s))(va_list _list);
 int print_num(long _n, int _c);
 int u_func(va_list _list);
-
-
+int custom_octal_format(unsigned int value);
+int o_func(va_list _list);
 
 
 #endif
