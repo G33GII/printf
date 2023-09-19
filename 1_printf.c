@@ -28,7 +28,7 @@ int _printf(const char *const format, ...)
 		if (*_fmt == '%')
 		{
 			_fmt++; /* Move to the character after '%' */
-			if (*_fmt == 'c' || *_fmt == 's' || *_fmt == 'd' || *_fmt == 'i')
+			if (*_fmt == 'c' || *_fmt == 's' || *_fmt == 'd' || *_fmt == 'i' || *_fmt == 'i')
 				_length += _slt_func(*_fmt)(_list);
 			else if (*_fmt == '%')
 			{

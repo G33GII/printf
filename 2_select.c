@@ -14,6 +14,7 @@ int (*_slt_func(char s))(va_list _list)
 		{'s', &s_func},
 		{'d', &d_func},
 		{'i', &d_func},
+		{'b', &b_func},
 		{'\0', NULL}
 	};
 	for (i = 0; fmt_sp[i]._chars; i++)
