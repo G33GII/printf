@@ -40,5 +40,5 @@ int _printf(const char *const format, ...)
 			_length += _putchar(*_fmt);
 	}
 	va_end(_list);
-	return (_length);
+	return (_length + 1);
 }
