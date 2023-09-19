@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * hexadecimal_lowercase - print hexadecimal in lowercase
+ * hexadecimal_uppercase - print hexadecimal in lowercase
  * @value: number
- * @uppercase: uppercase letters
+ * @uppercase: lowercase letters
  * Return: 0
  */
-int hexadecimal_lowercase(unsigned int value, int uppercase)
+int hexadecimal_uppercase(unsigned int value, int uppercase)
 {
 	char hex_buffer[32];
 	int hex_length = 0;
@@ -23,6 +23,7 @@ int hexadecimal_lowercase(unsigned int value, int uppercase)
 		hex_buffer[hex_length++] = hex_chars[value % 16];
 		value /= 16;
 	}
+
 	for (int i = hex_length - 1; i >= 0; i--)
 	{
 		_putchar(hex_buffer[i]);
@@ -31,15 +32,15 @@ int hexadecimal_lowercase(unsigned int value, int uppercase)
 	return (hex_length);
 }
 /**
- * x_func - prototype for lowercase hexadecimal
+ * X_func - prototype for lowercase hexadecimal
  * @_list: variable name
  * Return: 0
  */
-int x_func(va_list _list)
+int X_func(va_list _list)
 {
 	unsigned int _v = va_arg(_list, unsigned int);
 
-	int hex_length = hexadecimal_lowercase(_v, 0);
+	int hex_length = hexadecimal_uppercase(_v, 1);
 
 	return (hex_length);
 }
