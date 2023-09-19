@@ -2,14 +2,12 @@
 
 /**
  * d_func - Print a number to the standard output.
- * @_list: The integer to print.
+ * @list: The integer to print.
  * Return: The number of characters printed.
  */
-int d_func(va_list _list)
+int d_func(va_list list)
 {
-	int _c = 0;
-	int _v = va_arg(_list, int);
+	int value = va_arg(list, int);
 
-	_c = print_num(_v, 0);
-	return (_c);
+	return (print_num(value, 0));
 }

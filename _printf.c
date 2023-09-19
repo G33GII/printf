@@ -3,35 +3,39 @@
 /**
  * _printf - Custom printf function supporting %c and %s format specifiers.
  * @format: The format string.
+ *
  * Return: The total number of characters printed.
  */
-int _printf(const char *const format, ...)
+int _printf(const char *format, ...)
 {
-    int _length = 0;
-    va_list _list;
-    const char *_fmt = format;
+	const char *fmt_ptr = format;
+	int length = 0;           /* Total character count */
+	va_list list;             /* Argument list */
 
-    if (format == NULL)
-        return (-1);
-    va_start(_list, format);
+	va_start(list, format);   /* Initialize argument list */
+	if (format == NULL || !fmt_ptr)
+		return (-1);
+	for (; *fmt_ptr; fmt_ptr++)
+	{
+		if (*fmt_ptr == '%')
+		{
+			fmt_ptr++; /* Move to the character after '%' */
 
-    for (; *_fmt && format; _fmt++)
-    {
-        if (*_fmt == '%')
-        {
-            _fmt++; /* Move to the character after '%' */
-            if (*_fmt == 'c' || *_fmt == 's')
-                _length += _slt_func(*_fmt)(_list);
-            else
-            {
-                _length += _putchar(*_fmt);
-                continue;
-            }
-        }
-        else
-            _length += _putchar(*_fmt);
-    }
-    va_end(_list);
-    return (_length);
+			if (*fmt_ptr == '%')
+			{
+				/* Handle "%%" by printing a single '%' character */
+				length += putchar_wrapper('%');
+				if (*fmt_ptr !=  '%')
+                	length += putchar_wrapper(*fmt_ptr);
+				continue; /* Move to the next character */
+			}
+/* Use the select_format_specifier function to select the appropriate handler*/
+			length += select_format_specifier(list, *fmt_ptr);
+		} else
+		{
+			length += putchar_wrapper(*fmt_ptr);
+		}
+	}
+	va_end(list);
+	return (length);
 }
-

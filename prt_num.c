@@ -2,22 +2,22 @@
 
 /**
  * print_num - Print a number to the standard output.
- * @_n: The number to print.
- * @_c: Number count variable
+ * @n: The number to print.
+ * @c: Number count variable
  * Return: The number of characters printed.
  */
-int print_num(long _n, int _c)
+int print_num(long n, int c)
 {
-	if (_n < 0)
+	if (n < 0)
 	{
-		_putchar('-');
-		_c++;
-		_n *= -1;
+		putchar_wrapper('-');
+		c++;
+		n *= -1;
 	}
 
-	if (_n / 10)
-		_c = print_num(_n / 10, _c);
+	if (n / 10)
+		c = print_num(n / 10, c);
 
-	_putchar(_n % 10 + '0');
-	return (_c + 1);
+	putchar_wrapper(n % 10 + '0');
+	return (c + 1);
 }

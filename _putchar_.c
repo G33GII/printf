@@ -2,12 +2,12 @@
 #include <unistd.h>
 
 /**
- * _putchar - prototype to print characters
- * @_p: character
+ * putchar_wrapper - prototype to print characters
+ * @c: character
  *
  * Return: 0
  */
-int _putchar(char _p)
+int putchar_wrapper(char c)
 {
-	return (write(1, &_p, 1));
+	return (write(1, &c, 1));
 }
