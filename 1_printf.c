@@ -16,8 +16,7 @@ int _printf(const char *const format, ...)
 	_fmt = format;
 	if ((_fmt[0] == '%' && !_fmt[1]) || !_fmt)
 		return (-1);
-	if ((!_fmt[2] && _fmt[0] == '%' && (_fmt[1] == ' ' || _fmt[1] == '+'
-					|| _fmt[1] == '#')))
+	if ((!_fmt[2] && _fmt[0] == '%' && _fmt[1] == ' '))
 		return (-1);
 
 
@@ -28,7 +27,8 @@ int _printf(const char *const format, ...)
 		if (*_fmt == '%')
 		{
 			_fmt++; /* Move to the character after '%' */
-			if (*_fmt == 'c' || *_fmt == 's' || *_fmt == 'd' || *_fmt == 'i')
+			if (*_fmt == 'c' || *_fmt == 's' || *_fmt == 'd' || 
+			*_fmt == 'i' || *_fmt == 'u' ||  *_fmt == 'o')
 				_length += _slt_func(*_fmt)(_list);
 			else if (*_fmt == '%')
 			{
