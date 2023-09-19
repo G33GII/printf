@@ -37,6 +37,5 @@ int b_func(va_list _list)
 
 		write(1, &z, 1);
 	}
-	dx += write(1, "\n", 1); /* Print newline and update count */
 	return (dx); /* Return the count of binary digits printed */
 }

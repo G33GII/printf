@@ -8,7 +8,8 @@
 int hexadecimal_lowercase(unsigned int value, int uppercase)
 {
 	char hex_buffer[32];
-	int hex_length = 0;
+	int hex_length = 0, i;
+	const char *hex_chars;
 
 	if (value == 0)
 	{
@@ -16,14 +17,14 @@ int hexadecimal_lowercase(unsigned int value, int uppercase)
 		return (1);
 	}
 
-	const char *hex_chars = (uppercase) ? "0123456789ABCDEF" : "0123456789abcdef";
+	hex_chars = (uppercase) ? "0123456789ABCDEF" : "0123456789abcdef";
 
 	while (value > 0)
 	{
 		hex_buffer[hex_length++] = hex_chars[value % 16];
 		value /= 16;
 	}
-	for (int i = hex_length - 1; i >= 0; i--)
+	for (i = hex_length - 1; i >= 0; i--)
 	{
 		_putchar(hex_buffer[i]);
 	}
