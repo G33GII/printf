@@ -7,15 +7,15 @@
  */
 int s_func(va_list _list)
 {
-	int _l = 0;
+	int _x = 0;
 	char *_s = va_arg(_list, char *);
 
-	if (_s == NULL)
+	if (!_s)
 		_s = "(null)";
 	if (*_s == '\0')
 		return (0);
-	for (; *_s; _s++, _l++)
-		_putchar(*_s);
-	return (_l);
+	for (; *_s; _s++, _x++)
+		_x += _putchar(*_s);
+	return (_x);
 }
 

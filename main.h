@@ -5,7 +5,7 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <unistd.h>
-#define buffsize 1024
+
 /**
  * struct _lst - new data type
  * @_chars: member of new data type

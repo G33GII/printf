@@ -7,9 +7,8 @@
  */
 int d_func(va_list _list)
 {
-	int _c = 0;
+	/*int _c = 0;*/
 	int _v = va_arg(_list, int);
 
-	_c = print_num(_v, 0);
-	return (_c);
+	return (print_num(_v, 0));
 }

@@ -44,5 +44,8 @@ int main(void)
 
     _printf("Unknown:[%%%%%%]\n");
     printf("Unknown:[%%%%%%]\n\n");
+
+    _printf("Unknown:[%c]\n", 48);
+    printf("Unknown:[%c]\n\n", 48);
     return (0);
 }
