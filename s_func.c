@@ -2,20 +2,20 @@
 
 /**
  * s_func - Print a string to the standard output.
- * @list: The string to print.
+ * @_list: The string to print.
  * Return: The number of characters printed.
  */
-int s_func(va_list list)
+int s_func(va_list _list)
 {
-	int length = 0;
-	char *s = va_arg(list, char *);
+	int _l = 0;
+	char *_s = va_arg(_list, char *);
 
-	if (s == NULL)
-		s = "(null)";
-
-	for (; *s; s++, length++)
-		putchar_wrapper(*s);
-
-	return (length);
+	if (_s == NULL)
+		_s = "(null)";
+	if (*_s == '\0')
+		return (0);
+	for (; *_s; _s++, _l++)
+		_putchar(*_s);
+	return (_l);
 }
 

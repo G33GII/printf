@@ -9,5 +9,5 @@ int c_func(va_list _list)
 {
 	char _c = va_arg(_list, int);
 
-	return (_putchar(_c));
+	return (putchar_wrapper(_c));
 }

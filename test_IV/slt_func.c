@@ -17,7 +17,7 @@ int select_format_specifier(va_list list, char format)
 		{'c', &c_func},
 		{'s', &s_func},
 		{'d', &d_func},
-        {'i', &d_func},
+		{'i', &d_func},
 		{'x', &x_func}, /* Add support for %x */
 		{'\0', NULL}
 	};
@@ -29,24 +29,24 @@ int select_format_specifier(va_list list, char format)
 	{
 		if (format == format_specifiers[i].format)
 		{
-		length += format_specifiers[i].func(list);
-            found = 1;
+			length += format_specifiers[i].func(list);
+			found = 1;
 			break;
 		}
 	}
 
-    if (!found)
-    {
-                putchar_wrapper('%');
-                if (format !=  '%')
-                  putchar_wrapper(format);
-                length += 2;
-    }
-    
-        else
-        {
-            length += putchar_wrapper(format);
-        }
+	if (!found)
+	{
+		putchar_wrapper('%');
+		if (format !=  '%')
+			putchar_wrapper(format);
+		length += 2;
+	}
+
+	else
+	{
+		length += putchar_wrapper(format);
+	}
 
 	return (length);
 }

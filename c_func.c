@@ -7,7 +7,7 @@
  */
 int c_func(va_list _list)
 {
-	char _c = va_arg(_list, int);
+	int _c = va_arg(_list, int);
 
-	return (putchar_wrapper(_c));
+	return (_putchar(_c));
 }

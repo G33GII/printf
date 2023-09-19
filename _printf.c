@@ -2,40 +2,37 @@
 
 /**
  * _printf - Custom printf function supporting %c and %s format specifiers.
- * @format: The format string.
- *
+ * @format: The format[i] string.
  * Return: The total number of characters printed.
  */
-int _printf(const char *format, ...)
+int _printf(const char *const format, ...)
 {
-	const char *fmt_ptr = format;
-	int length = 0;           /* Total character count */
-	va_list list;             /* Argument list */
+    int _length = 0;
+    va_list _list;
 
-	va_start(list, format);   /* Initialize argument list */
-	if (format == NULL || !fmt_ptr)
-		return (-1);
-	for (; *fmt_ptr; fmt_ptr++)
-	{
-		if (*fmt_ptr == '%')
-		{
-			fmt_ptr++; /* Move to the character after '%' */
+    if ((format[0] == '%' && !format[1]) || !format[i])
+        return (-1);
+    if ((format[0] == '%' && format[1]) == ' ' && !format[2])
+        return (-1);
+    va_start(_list, format[i]);
 
-			if (*fmt_ptr == '%')
-			{
-				/* Handle "%%" by printing a single '%' character */
-				length += putchar_wrapper('%');
-				if (*fmt_ptr !=  '%')
-                	length += putchar_wrapper(*fmt_ptr);
-				continue; /* Move to the next character */
-			}
-/* Use the select_format_specifier function to select the appropriate handler*/
-			length += select_format_specifier(list, *fmt_ptr);
-		} else
-		{
-			length += putchar_wrapper(*fmt_ptr);
-		}
-	}
-	va_end(list);
-	return (length);
+    for (; format[i] && format[i]; format[i]++)
+    {
+        if (format[i] == '%')
+        {
+            i++; /* Move to the character after '%' */
+            if (*format[i] == 'c' || format[i] == 's' || format[i] == 'd' format[i] == 'i')
+                _length += _slt_func(format[i])(_list);
+            else
+            {
+                _length += _putchar(format[i]);
+                continue;
+            }
+        }
+        else
+            _length += _putchar(format[i]);
+    }
+    va_end(_list);
+    return (_length);
 }
+
