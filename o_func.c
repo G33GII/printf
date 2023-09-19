@@ -13,7 +13,7 @@ int custom_octal_format(unsigned int value)
 	if (value == 0)
 	{
 		_putchar('0');
-		return 1;
+		return (1);
 	}
 	while (value > 0)
 	{
@@ -26,7 +26,7 @@ int custom_octal_format(unsigned int value)
 		_putchar(octal_buffer[i]);
 	}
 
-	return octal_length;
+	return (octal_length);
 }
 /**
  * o_func - octal representation function
@@ -36,6 +36,8 @@ int custom_octal_format(unsigned int value)
 int o_func(va_list _list)
 {
 	unsigned int _v = va_arg(_list, unsigned int);
+
 	int octal_length = custom_octal_format(_v);
-	return octal_length;
+
+	return (octal_length);
 }
