@@ -55,6 +55,7 @@ int main(void)
     _printf(NULL);*/
 
     _printf("%b\n", 48);
+    _printf("%b\n", 98);
     /*printf("b%\n", 48);*/
     return (0);
 }
