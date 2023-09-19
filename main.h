@@ -5,7 +5,7 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <unistd.h>
-
+#define buffsize 1024
 /**
  * struct _lst - new data type
  * @_chars: member of new data type
@@ -30,7 +30,7 @@ int c_func(va_list _list);
 int d_func(va_list _list);
 int (*_slt_func(char s))(va_list _list);
 int print_num(long _n, int _c);
-
+int u_func(va_list _list);
 
 
 
