@@ -31,7 +31,6 @@ int b_func(va_list _list)
 	{
 		return (-1); /* Return -1 if input is zero */
 	}
-
 	/* Print the binary representation in reverse order */
 	for (i = dx - 1; i >= 0; i--)
 	{
