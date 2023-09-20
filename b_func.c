@@ -23,7 +23,7 @@ int b_func(va_list _list)
 	if (x == 0)
 	{
 		h = x + '0';
-		write (1, &h, 1);
+		write(1, &h, 1);
 		return (0);
 	}
 	/* Convert the integer to binary */

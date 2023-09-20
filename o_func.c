@@ -8,8 +8,8 @@
 int custom_octal_format(unsigned int value)
 {
 	char octal_buffer[32];
-	int octal_length = 0;
-    int i;
+	int octal_length = 0, i;
+
 	if (value == 0)
 	{
 		_putchar('0');
