@@ -13,13 +13,13 @@
  */
 int b_func(va_list _list)
 {
-	size_t x, h;
-	int binary[32]; /* Assuming 32-bit integers */
+	unsigned int x, h;
+	int binary[64]; /* Assuming 32-bit integers */
 	int dx = 0, i;
 
 	x = va_arg(_list, int);
-	if (x > INT_MAX)
-		return (-1); /* Return -1 if input is zero */
+	/*if (x > INT_MAX)
+		return (-1);  Return -1 if input is zero */
 	if (x == 0)
 	{
 		h = x + '0';
@@ -32,7 +32,7 @@ int b_func(va_list _list)
 		binary[dx++] = x % 2;
 		x /= 2;
 	}
-	if (dx >= 32)
+	if (dx >= 64)
 	{
 		return (-1); /* Return -1 if input is zero */
 	}
