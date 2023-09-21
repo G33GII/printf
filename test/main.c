@@ -9,6 +9,7 @@
  */
 int main(void)
 {
+    long int res = INT_MAX;
    /* int len;
     int len2;
    
@@ -53,7 +54,7 @@ int main(void)
     
    printf(NULL);
     _printf(NULL);*/
-    long int res = INT_MAX;
+
 
     _printf("%b + %b = %b\n", INT_MAX, INT_MAX, res);
     _printf("%b", UINT_MAX);
@@ -61,6 +62,8 @@ int main(void)
     _printf("%b\n", 0);
    _printf("%b\n", 1024); 
    _printf("%b\n", -1024);
-    /*printf("b%\n", 48);*/
+
+
+
     return (0);
 }
