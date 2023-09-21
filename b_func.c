@@ -14,7 +14,7 @@
 int b_func(va_list _list)
 {
 	unsigned int x, h;
-	int binary[64]; /* Assuming 32-bit integers */
+	int binary[1024]; /* Assuming 32-bit integers */
 	int dx = 0, i;
 
 	x = va_arg(_list, int);
@@ -30,7 +30,7 @@ int b_func(va_list _list)
 		binary[dx++] = x % 2;
 		x /= 2;
 	}
-	if (dx >= 64)
+	if (dx >= 1024)
 	{
 		return (-1); /* Return -1 if input is zero */
 	}
