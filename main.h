@@ -11,18 +11,17 @@
  * @_chars: member of new data type
  * @_func: member of new data type
  * Return: 0
+ * =============================
+ * _lst_arr - Renamed data type
+ * ===============================
 */
-struct _lst
+typedef struct _lst
 {
 	char _chars;
 	int (*_func)(va_list _list);
-};
+} _lst_arr;
 
-/**
- * _lst_arr - Renamed data type
- * Return: 0
-*/
-typedef struct _lst _lst_arr;
+
 int _printf(const char *format, ...);
 int _putchar(char _p);
 int _strchr(char target);
@@ -35,9 +34,11 @@ int u_func(va_list _list);
 int custom_octal_format(unsigned int value);
 int o_func(va_list _list);
 int b_func(va_list _list);
-
 int x_func(va_list _list);
 int hexadecimal_lowercase(unsigned int value, int uppercase);
 int hexadecimal_uppercase(unsigned int value, int uppercase);
 int X_func(va_list _list);
-#endif
+int s_func(va_list _list);
+
+
+#endif	/* Ends if statement */
