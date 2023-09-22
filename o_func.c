@@ -7,7 +7,7 @@
  */
 int custom_octal_format(unsigned int value)
 {
-	char octal_buffer[32];
+	char octal_buffer[1024];
 	int octal_length = 0, i;
 
 	if (value == 0)

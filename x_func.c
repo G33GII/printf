@@ -7,7 +7,7 @@
  */
 int hexadecimal_lowercase(unsigned int value, int uppercase)
 {
-	char hex_buffer[32];
+	char hex_buffer[1024];
 	int hex_length = 0, i;
 	const char *hex_chars;
 

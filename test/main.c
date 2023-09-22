@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-    long int res = INT_MAX;
-   /* int len;
+    /* long int res = INT_MAX;
+    int len;
     int len2;
    
 
@@ -53,7 +53,7 @@ int main(void)
     _printf("Unknown:%\n");
     
     printf(NULL);
-    _printf(NULL);*/
+    _printf(NULL);
 
 
     _printf("%b + %b = %b\n", INT_MAX, INT_MAX, res);
@@ -61,9 +61,62 @@ int main(void)
   _printf("%b\n", 98);
     _printf("%b\n", 0);
    _printf("%b\n", 1024); 
-   _printf("%b\n", -1024);
+   _printf("%b\n", -1024);*/
+
+   long int l = UINT_MAX + 1024;
+   long int res = (long int)INT_MAX * 2;
 
 
+  printf("%x\n", 1024);
+  _printf("%x\n", 1024);
+
+  _printf("%x\n", -1024);
+  _printf("%x\n", -1024);
+  
+  _printf("%x\n", 0);
+  _printf("%x\n", 0);
+
+  printf("%x\n", UINT_MAX);
+  _printf("%x\n", UINT_MAX);
+
+  printf("%x\n", l);
+  _printf("%x\n", l);
+
+  printf("There is %x bytes in %x KB\n", 1024, 1);
+  _printf("There is %x bytes in %x KB\n", 1024, 1);
+
+  printf("%x - %x = %x\n", 2048, 1024, 1024);
+  _printf("%x - %x = %x\n", 2048, 1024, 1024);
+
+  printf("%x + %x = %x\n", INT_MAX, INT_MAX, res);
+  _printf("%x + %x = %x\n", INT_MAX, INT_MAX, res);
+
+  printf("%X\n", 1024);
+  _printf("%X\n", 1024);
+
+  printf("%X\n", -1024);
+  _printf("%X\n", -1024);
+
+  printf("%X\n", 0);
+  _printf("%X\n", 0);
+
+  printf("%X\n", UINT_MAX);
+  _printf("%X\n", UINT_MAX);
+  
+  printf("There is %X bytes in %X KB\n", 1024, 1);
+  _printf("There is %X bytes in %X KB\n", 1024, 1);
+
+  printf("%X - %X = %X\n", 2048, 1024, 1024);
+  _printf("%X - %X = %X\n", 2048, 1024, 1024);
+
+  printf("%X + %X = %X\n", INT_MAX, INT_MAX, res);
+  _printf("%X + %X = %X\n", INT_MAX, INT_MAX, res);
+
+  printf("%u == %o == %x == %X\n", 1024, 1024, 1024, 1024);
+  _printf("%u == %o == %x == %X\n", 1024, 1024, 1024, 1024);
+
+  printf("uuoxxX%xuoXo\n", 1024);
+  _printf("uuoxxX%xuoXo\n", 1024);
 
     return (0);
 }
