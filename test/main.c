@@ -94,8 +94,8 @@ int main(void)
 	  printf("uuoxxX%xuoXo\n", 1024);
 	  _printf("uuoxxX%xuoXo\n", 1024);
 	  =============================================================*/
-    
-	_printf("%S\n", "Best\nSchool");
+
+	_printf("%S\n", "Best\nSchool");  /* Best\x0ASchool */
 
 	return (0);
 }
