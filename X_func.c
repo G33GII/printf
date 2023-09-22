@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * hexadecimal_uppercase - print hexadecimal in lowercase
  * @value: number

@@ -70,10 +70,10 @@ int main(void)
   printf("%x\n", 1024);
   _printf("%x\n", 1024);
 
-  _printf("%x\n", -1024);
+  printf("%x\n", -1024);
   _printf("%x\n", -1024);
   
-  _printf("%x\n", 0);
+  printf("%x\n", 0);
   _printf("%x\n", 0);
 
   printf("%x\n", UINT_MAX);
