@@ -9,13 +9,13 @@
  */
 int main(void)
 {
-	/* long int res = INT_MAX;
+    /*long int res = INT_MAX;
 
 	   int len;
-	   int len2;
+	   int len2;*/
 	   long int l = UINT_MAX + 1024;
 	   long int res = (long int)INT_MAX * 2;
-	   ==================================================================
+	  	/* ==================================================================
 	   len = _printf("Let's try to printf a simple sentence.\n");
 	   len2 = printf("Let's try to printf a simple sentence.\n");
 	   addr = (void *)0x7ffe637541f0;
@@ -58,7 +58,7 @@ int main(void)
 	  _printf("%b\n", 0);
 	  _printf("%b\n", 1024); 
 	  _printf("%b\n", -1024);
-	  =========================================================
+	  =========================================================*/
 	  printf("%x\n", 1024);
 	  _printf("%x\n", 1024);
 	  printf("%x\n", -1024);
@@ -93,9 +93,9 @@ int main(void)
 	  _printf("%u == %o == %x == %X\n", 1024, 1024, 1024, 1024);
 	  printf("uuoxxX%xuoXo\n", 1024);
 	  _printf("uuoxxX%xuoXo\n", 1024);
-	  =============================================================*/
+	 
 
-	_printf("%S\n", "Best\nSchool");  /* Best\x0ASchool */
+	/*_printf("%S\n", "Best\nSchool");   Best\x0ASchool */
 
 	return (0);
 }
