@@ -58,7 +58,7 @@ int main(void)
 	  _printf("%b\n", 0);
 	  _printf("%b\n", 1024); 
 	  _printf("%b\n", -1024);
-	  =========================================================*/
+	  =========================================================
 	  printf("%x\n", 1024);
 	  _printf("%x\n", 1024);
 	  printf("%x\n", -1024);
@@ -92,10 +92,10 @@ int main(void)
 	  printf("%u == %o == %x == %X\n", 1024, 1024, 1024, 1024);
 	  _printf("%u == %o == %x == %X\n", 1024, 1024, 1024, 1024);
 	  printf("uuoxxX%xuoXo\n", 1024);
-	  _printf("uuoxxX%xuoXo\n", 1024);
+	  _printf("uuoxxX%xuoXo\n", 1024);*/
 	 
 
-	/*_printf("%S\n", "Best\nSchool");   Best\x0ASchool */
+	_printf("%S\n", "Best\nSchool");   /* Best\x0ASchool */
 
 	return (0);
 }
