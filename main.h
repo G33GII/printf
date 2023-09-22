@@ -25,6 +25,7 @@ struct _lst
 typedef struct _lst _lst_arr;
 int _printf(const char *format, ...);
 int _putchar(char _p);
+int _strchr(char target);
 int s_func(va_list _list);
 int c_func(va_list _list);
 int d_func(va_list _list);
