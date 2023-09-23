@@ -12,10 +12,10 @@ int main(void)
     /*long int res = INT_MAX;
 
 	   int len;
-	   int len2;*/
+	   int len2;
 	   long int l = UINT_MAX + 1024;
 	   long int res = (long int)INT_MAX * 2;
-	  	/* ==================================================================
+	  	 ==================================================================
 	   len = _printf("Let's try to printf a simple sentence.\n");
 	   len2 = printf("Let's try to printf a simple sentence.\n");
 	   addr = (void *)0x7ffe637541f0;

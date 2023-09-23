@@ -38,7 +38,7 @@ int x_func(va_list _list);
 int hexadecimal_lowercase(unsigned int value, int uppercase);
 int hexadecimal_uppercase(unsigned int value, int uppercase);
 int X_func(va_list _list);
-int s_func(va_list _list);
+int S_func(va_list _list);
 
 
 #endif	/* Ends if statement */
