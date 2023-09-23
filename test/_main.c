@@ -12,6 +12,6 @@ int main(void)
 	_length_ += _printf("printf\n");
 	_length_ += _printf("String:[%s]\n", "string !");
 	_length_ += _printf("C:[%c]\n", 'H');
-
+	_printf("%p", (void *)0x7fff5100b608);
 	return (0);
 }

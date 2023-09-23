@@ -10,7 +10,7 @@
 int _strchr(char target)
 {
 	int x;
-	char charArray[] = "csSdibuoxX";  /* Initialize an array of characters */
+	char charArray[] = "csSdibuoxXp";  /* Initialize an array of characters */
 
 	for (x = 0; charArray[x]; x++)
 	{

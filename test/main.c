@@ -9,10 +9,10 @@
  */
 int main(void)
 {
-    /*long int res = INT_MAX;
+    long int res = INT_MAX;
 
-	   int len;
-	   int len2;
+	   /*int len;
+	   int len2;*/
 	   long int l = UINT_MAX + 1024;
 	   long int res = (long int)INT_MAX * 2;
 	  	 ==================================================================
@@ -94,7 +94,7 @@ int main(void)
 	  printf("uuoxxX%xuoXo\n", 1024);
 	  _printf("uuoxxX%xuoXo\n", 1024);*/
 	 
-
+	_printf("%p", (void *)0x7fff5100b608);
 	_printf("%S\n", "Best\nSchool");   /* Best\x0ASchool */
 
 	return (0);
