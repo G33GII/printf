@@ -64,7 +64,8 @@ int my_snprintf(char *str, size_t size, const char *format, ...) {
 */
 int S_func(va_list _list)
 {
-    char *x = va_arg(_list, char*)
+    int length = 0;
+    char *x = va_arg(_list, char*);
     char formatted[1024];
 
     while (*x)
@@ -76,41 +77,11 @@ int S_func(va_list _list)
             fputs(formatted, stdout); /* Print the formatted string */
         } else {
             /* Printable character */
-            putchar(*input);
+            putchar(*x);
         }
-        input++;
+        x++;
     }
 return (length);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#include <stdio.h>
-#include <stdarg.h>
-
-
-/* Function to print non-printable characters in a formatted way */
-void printNonPrintableFormatted(const char *input) {
-    
-}
-
-
-
 

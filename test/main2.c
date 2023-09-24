@@ -9,13 +9,13 @@
  */
 int main(void)
 {
-    long int res = INT_MAX;
+ /* long int res = INT_MAX;
 
-	   /*int len;
-	   int len2;*/
+	   int len;
+	   int len2;
 	   long int l = UINT_MAX + 1024;
 	   long int res = (long int)INT_MAX * 2;
-	/*==================================================================
+	==================================================================
 	   len = _printf("Let's try to printf a simple sentence.\n");
 	   len2 = printf("Let's try to printf a simple sentence.\n");
 	   addr = (void *)0x7ffe637541f0;
@@ -94,8 +94,21 @@ int main(void)
 	  printf("uuoxxX%xuoXo\n", 1024);
 	  _printf("uuoxxX%xuoXo\n", 1024);*/
 	 
-	_printf("%p", (void *)0x7fff5100b608);
-	_printf("%S\n", "Best\nSchool");   /* Best\x0ASchool */
+	/* \x01\x02\x03\x04\x05\x06\x07\x01\x02\x03\x04\x05\x06\x07 */
+	_printf("%S", "\x01\x02\x03\x04\x05\x06\x07");
+
+	/* Best\x0ASchool */
+	_printf("%S\n", "Best\nSchool");
+
+	/* Could you print some non-prntable characters?
+	Sure:\x1F\x7F\x0A
+	Thanks!
+	Could you print some non-prntable characters?
+	Sure:\x1F\x7F\x0A
+	Thanks! */
+	_printf("Could you print some non-prntable characters?\n%S\nThanks!\n", "Sure:\x1F\x7F\n");
+	
+
 
 	return (0);
 }
