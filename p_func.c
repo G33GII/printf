@@ -15,7 +15,7 @@ int p_func(va_list _list)
 	int len = 0;
 
 	if (!value)
-		return(write(1, "(nill)", 6));
+		return(write(1, "(nil)", 5));
 
 	ptr_str[index++] = '0';
 	ptr_str[index++] = 'x';
