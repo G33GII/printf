@@ -14,6 +14,9 @@ int p_func(va_list _list)
 	int index = 0;
 	int len = 0;
 
+	if (!value)
+		return(write(1, "(nill)", 6));
+
 	ptr_str[index++] = '0';
 	ptr_str[index++] = 'x';
 
@@ -21,7 +24,7 @@ int p_func(va_list _list)
 	{
 		digit = value % 16;
 		ptr_str[index++] = (digit < 10) ?
-			(char)(digit + '0') : (char)(digit - 10 + 'A');
+			(char)(digit + '0') : (char)(digit - 10 + 'a');
 		value /= 16;
 	}
 	ptr_str[index] = '\0';
