@@ -12,7 +12,7 @@ int (*_slt_func(char s))(va_list _list)
 	_lst_arr fmt_sp[] = {
 		{'c', &c_func},
 		{'s', &s_func},
-		{'S', &s_func},
+		{'S', &S_func},
 		{'d', &d_func},
 		{'i', &d_func},
 		{'b', &b_func},
