@@ -106,14 +106,25 @@ int main(void)
 	Could you print some non-prntable characters?
 	Sure:\x1F\x7F\x0A
 	Thanks! 
-	_printf("Could you print some non-prntable characters?\n%S\nThanks!\n", "Sure:\x1F\x7F\n");*/
+	_printf("Could you print some non-prntable characters?\n%S\nThanks!\n", "Sure:\x1F\x7F\n");
 
 	_printf("%p\n\n", (void *)0x7fff5100b608);
 	_printf("%p\n\n", NULL);
 	_printf("Can you print an address?\n%p\nNice!\n\n", (void *)0x7fff5100b6f8);
 	_printf("Can you print several addresses?\n%p,%p,%p,%p\nNice!\n\n", (void *)0x7fff5100b6f8, (void *)0x7faf51f0f608, (void *)0x6ff42510b6f8, (void *)0x7fff510236f8);
 	_printf("Can you print an address?\n%p\nNice!\n\n", (void *)-1);
-	_printf("%pppp\n", (void *)0x7fff5100b6f8);
+	_printf("%pppp\n", (void *)0x7fff5100b6f8);*/
+
+
+_printf("%+d\n", 1024);
+_printf("%+d\n", -1024);
+_printf("%+d\n", 0);
+_printf("%+d\n", INT_MAX);
+printf("%+d\n", INT_MIN);
+_printf("There is %+d bytes in %+d KB\n", 1024, 1);
+_printf("%+d + %+d = %+d\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
+_printf("%+i\n", -1024);
+_printf("%+i + %+i = %+i\n", INT_MIN, INT_MAX, (INT_MIN + INT_MAX));
 
 	
 
