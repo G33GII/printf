@@ -94,19 +94,27 @@ int main(void)
 	  printf("uuoxxX%xuoXo\n", 1024);
 	  _printf("uuoxxX%xuoXo\n", 1024);*/
 	 
-	/* \x01\x02\x03\x04\x05\x06\x07\x01\x02\x03\x04\x05\x06\x07 */
+	/* \x01\x02\x03\x04\x05\x06\x07\x01\x02\x03\x04\x05\x06\x07 
 	_printf("%S", "\x01\x02\x03\x04\x05\x06\x07");
 
-	/* Best\x0ASchool */
+	Best\x0ASchool 
 	_printf("%S\n", "Best\nSchool");
 
-	/* Could you print some non-prntable characters?
+	Could you print some non-prntable characters?
 	Sure:\x1F\x7F\x0A
 	Thanks!
 	Could you print some non-prntable characters?
 	Sure:\x1F\x7F\x0A
-	Thanks! */
-	_printf("Could you print some non-prntable characters?\n%S\nThanks!\n", "Sure:\x1F\x7F\n");
+	Thanks! 
+	_printf("Could you print some non-prntable characters?\n%S\nThanks!\n", "Sure:\x1F\x7F\n");*/
+
+	_printf("%p\n", (void *)0x7fff5100b608);
+	_printf("%p\n", NULL);
+	_printf("Can you print an address?\n%p\nNice!\n", (void *)0x7fff5100b6f8);
+	_printf("Can you print several addresses?\n%p,%p,%p,%p\nNice!\n", (void *)0x7fff5100b6f8, (void *)0x7faf51f0f608, (void *)0x6ff42510b6f8, (void *)0x7fff510236f8);
+	_printf("Can you print an address?\n%p\nNice!\n", (void *)-1);
+	_printf("%pppp\n", (void *)0x7fff5100b6f8);
+
 	
 
 

@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * p_func - handles p modifier
  * @_list: variable of va_list
@@ -35,11 +36,6 @@ int p_func(va_list _list)
 		end--;
 	}
 	len = 0;
-	for (a = 0; ptr_str[a] != '\0'; a++)
-	{
-		_putchar(ptr_str[a]);
-		len++;
-	}
 	for (a = 0; ptr_str[a] != '\0'; a++)
 	{
 		_putchar(ptr_str[a]);
